@@ -4,4 +4,11 @@
 
 `pip --version`
 
-pip version: `24.3.1`
+Answer: `24.3.1`
+
+## Question 2
+
+hostname: `postgres`
+port: `5432`
+
+Answer: `postgres:5432`
