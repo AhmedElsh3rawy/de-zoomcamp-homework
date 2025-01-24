@@ -19,7 +19,7 @@ Answer: `postgres:5432`
 
 ```sql
 SELECT
-  count(trip_distance)
+  COUNT(trip_distance)
 FROM
   green_taxi_trips
 WHERE
@@ -33,7 +33,7 @@ WHERE
 
 ```sql
 SELECT
-  count(trip_distance)
+  COUNT(trip_distance)
 FROM
   green_taxi_trips
 WHERE
@@ -48,7 +48,7 @@ WHERE
 
 ```sql
 SELECT
-  count(trip_distance)
+  COUNT(trip_distance)
 FROM
   green_taxi_trips
 WHERE
@@ -63,7 +63,7 @@ WHERE
 
 ```sql
 SELECT
-  count(trip_distance)
+  COUNT(trip_distance)
 FROM
   green_taxi_trips
 WHERE
@@ -79,7 +79,7 @@ WHERE
 ```sql
 
 SELECT
-  count(trip_distance)
+  COUNT(trip_distance)
 FROM
   green_taxi_trips
 WHERE
