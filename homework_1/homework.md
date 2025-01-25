@@ -114,7 +114,7 @@ WHERE
       z."Zone" = 'East Harlem North'
   )
   AND g.lpep_pickup_datetime >= '2019-10-01'
-  AND g.lpep_dropoff_datetime <= '2019-10-31'
+  AND g.lpep_pickup_datetime <= '2019-10-31'
 GROUP BY
   z."Zone"
 ORDER BY
@@ -122,3 +122,5 @@ ORDER BY
 LIMIT
   1;
 ```
+
+Answer: JFK Airport
