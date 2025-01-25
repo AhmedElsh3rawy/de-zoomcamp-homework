@@ -90,3 +90,35 @@ WHERE
 ```
 
 Answer: 104,802; 198,924; 109,603; 27,678; 35,189
+
+## Question 4
+
+## Question 6
+
+Largest tip
+
+```sql
+SELECT
+  z."Zone",
+  MAX(g.tip_amount) AS max_tip_amount
+FROM
+  green_taxi_trips g
+  INNER JOIN zones z ON g."DOLocationID" = z."LocationID"
+WHERE
+  g."PULocationID" = (
+    SELECT
+      z."LocationID"
+    FROM
+      zones z
+    WHERE
+      z."Zone" = 'East Harlem North'
+  )
+  AND g.lpep_pickup_datetime >= '2019-10-01'
+  AND g.lpep_dropoff_datetime <= '2019-10-31'
+GROUP BY
+  z."Zone"
+ORDER BY
+  max_tip_amount DESC
+LIMIT
+  1;
+```
