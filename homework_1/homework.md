@@ -9,6 +9,7 @@ Answer: `24.3.1`
 ## Question 2
 
 hostname: `postgres`
+
 port: `5432`
 
 Answer: `postgres:5432`
@@ -93,9 +94,34 @@ Answer: 104,802; 198,924; 109,603; 27,678; 35,189
 
 ## Question 4
 
+## Question 5
+
+#### Three biggest pickup zones
+
+```sql
+SELECT
+  z."Zone",
+  SUM(g.total_amount) AS sum_total_amount
+FROM
+  green_taxi_trips g
+  INNER JOIN zones z ON g."PULocationID" = z."LocationID"
+WHERE
+  g.lpep_pickup_datetime = '2019-10-18'
+GROUP BY
+  z."Zone"
+HAVING
+  SUM(g.total_amount) > 13000
+ORDER BY
+  sum_total_amount DESC
+LIMIT
+  3;
+```
+
+Answer: East Harlem North, East Harlem South, Morningside Heights
+
 ## Question 6
 
-Largest tip
+#### Largest tip
 
 ```sql
 SELECT
