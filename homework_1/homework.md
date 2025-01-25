@@ -4,15 +4,15 @@
 
 `pip --version`
 
-Answer: `24.3.1`
+Answer: 24.3.1
 
 ## Question 2
 
-hostname: `postgres`
+hostname: postgres
 
-port: `5432`
+port: 5432
 
-Answer: `postgres:5432`
+Answer: postgres:5432
 
 ## Question 3
 
@@ -93,6 +93,24 @@ WHERE
 Answer: 104,802; 198,924; 109,603; 27,678; 35,189
 
 ## Question 4
+
+#### Longest trip for each day
+
+```sql
+SELECT
+  DATE(lpep_pickup_datetime) AS pickup_day,
+  MAX(trip_distance) AS max_trip_distance
+FROM
+  green_taxi_trips
+GROUP BY
+  DATE(lpep_pickup_datetime)
+ORDER BY
+  longest_trip_distance DESC
+LIMIT
+  1;
+```
+
+Answer: 2019-10-31
 
 ## Question 5
 
