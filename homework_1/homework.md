@@ -168,3 +168,14 @@ LIMIT
 ```
 
 Answer: JFK Airport
+
+## Question 7
+
+1. Downloading the provider plugins and setting up backend
+   command: `terraform init`
+2. Generating proposed changes and auto-executing the plan
+   command: `terraform apply -auto-approve`
+3. Remove all resources managed by terraform
+   command: `terraform destroy`
+
+Answer: terraform init, terraform apply -auto-approve, terraform destroy
