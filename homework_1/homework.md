@@ -4,7 +4,7 @@
 
 `pip --version`
 
-Answer: 24.3.1
+**Answer**: 24.3.1
 
 ## Question 2
 
@@ -12,7 +12,7 @@ hostname: postgres
 
 port: 5432
 
-Answer: postgres:5432
+**Answer**: postgres:5432
 
 ## Question 3
 
@@ -90,7 +90,7 @@ WHERE
   AND trip_distance > 10;
 ```
 
-Answer: 104,802; 198,924; 109,603; 27,678; 35,189
+**Answer**: 104,802; 198,924; 109,603; 27,678; 35,189
 
 ## Question 4
 
@@ -110,7 +110,7 @@ LIMIT
   1;
 ```
 
-Answer: 2019-10-31
+**Answer**: 2019-10-31
 
 ## Question 5
 
@@ -135,7 +135,7 @@ LIMIT
   3;
 ```
 
-Answer: East Harlem North, East Harlem South, Morningside Heights
+**Answer**: East Harlem North, East Harlem South, Morningside Heights
 
 ## Question 6
 
@@ -167,7 +167,7 @@ LIMIT
   1;
 ```
 
-Answer: JFK Airport
+**Answer**: JFK Airport
 
 ## Question 7
 
@@ -178,4 +178,4 @@ Answer: JFK Airport
 3. Remove all resources managed by terraform  
    command: `terraform destroy`
 
-Answer: terraform init, terraform apply -auto-approve, terraform destroy
+**Answer**: terraform init, terraform apply -auto-approve, terraform destroy
