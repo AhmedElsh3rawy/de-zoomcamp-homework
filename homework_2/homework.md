@@ -54,3 +54,15 @@ tasks:
 ## Question 2
 
 **Answer**: `green_tripdata_2020-04.csv`
+
+## Question 6
+
+```yml
+triggers:
+  - id: daily
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "@daily"
+    timezone: America/New_York
+```
+
+**Answer**: Add a `timezone` property set to `America/New_York` in the Schedule trigger configuration
