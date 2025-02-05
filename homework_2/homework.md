@@ -55,6 +55,10 @@ tasks:
 
 **Answer**: `green_tripdata_2020-04.csv`
 
+## Question 5
+
+**Answer**: 1,925,152
+
 ## Question 6
 
 ```yml
