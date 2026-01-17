@@ -67,14 +67,19 @@ LIMIT 1;
 
 ```sql
 SELECT
-    pz."Zone" pickup_zone,
-    SUM(gtd."total_amount") total_earnings
-FROM green_taxi_data gtd
+    pz.zone pickup_zone,
+    SUM(gtd.total_amount) total_earnings
+FROM
+    green_taxi_data gtd
 INNER JOIN taxi_zone_lookup pz
-    ON gtd."PULocationID" = pz."LocationID"
-WHERE gtd."lpep_pickup_datetime"::date = '2025-11-18'
-GROUP BY pz."Zone"
-ORDER BY total_earnings DESC
+    ON
+    gtd.pulocationid = pz.locationid
+WHERE
+    gtd.lpep_pickup_datetime::date = '2025-11-18'
+GROUP BY
+    pz.zone
+ORDER BY
+    total_earnings DESC
 LIMIT 1;
 ```
 
@@ -84,20 +89,20 @@ LIMIT 1;
 
 ```sql
 SELECT
-    dz."Zone" dropoff_zone,
-    gtd."tip_amount" max_tip
+    dz.zone dropoff_zone,
+    gtd.tip_amount max_tip
 FROM
     green_taxi_data gtd
 INNER JOIN taxi_zone_lookup pz
     ON
-    gtd."PULocationID" = pz."LocationID"
+    gtd.pulocationid = pz.locationid
 INNER JOIN taxi_zone_lookup dz
     ON
-    gtd."DOLocationID" = dz."LocationID"
+    gtd.dolocationid = dz.locationid
 WHERE
-    pz."Zone" = 'East Harlem North'
+    pz.zone = 'East Harlem North'
 ORDER BY
-    gtd."tip_amount" DESC
+    gtd.tip_amount DESC
 LIMIT 1;
 ```
 
