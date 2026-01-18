@@ -21,7 +21,7 @@ def parquet_to_csv(input_file: str) -> None:
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python convert.py <input_file.parquet>")
+        print("Usage: python parquet_to_csv.py <input_file.parquet>")
         sys.exit(1)
 
     input_file = sys.argv[1]
