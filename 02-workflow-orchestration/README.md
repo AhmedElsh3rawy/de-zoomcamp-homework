@@ -24,7 +24,7 @@ SELECT COUNT(1) total_trips
 FROM green_taxi_2020;
 ```
 
-### Answer: `1,925,152`
+### Answer: `1,734,051`
 
 ## Question 5
 
